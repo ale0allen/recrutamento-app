@@ -1,5 +1,10 @@
+<div>
+  <a [routerLink]="['/create-job']" class="btn btn-success">Create Job</a>
+</div>
+
 <div *ngFor="let job of jobs">
   <h3>{{ job.title }}</h3>
   <p>{{ job.description }}</p>
-  <a [routerLink]="['/jobs', job.id]" class="btn btn-primary">View Details</a>
+  <button [routerLink]="['/job-details', job.id]">View Details</button>
+  <button (click)="apply(job.id)">Apply</button>
 </div>

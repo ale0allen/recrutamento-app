@@ -1,6 +1,7 @@
 <div *ngIf="job">
-    <h2>{{ job.title }}</h2>
-    <p>{{ job.description }}</p>
-    <button (click)="applyForJob(job.id)" class="btn btn-primary">Apply</button>
-  </div>
-  
+  <h2>{{ job.title }}</h2>
+  <p>{{ job.description }}</p>
+</div>
+<div *ngIf="!job">
+  <p>Loading job details...</p>
+</div>

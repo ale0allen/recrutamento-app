@@ -1,4 +1,6 @@
-<form (ngSubmit)="onSubmit()">
+<div>
+  <h2>Create Job</h2>
+  <form (ngSubmit)="onSubmit()">
     <div>
       <label for="title">Title</label>
       <input id="title" [(ngModel)]="title" name="title" required>
@@ -9,4 +11,4 @@
     </div>
     <button type="submit">Create Job</button>
   </form>
-  
+</div>

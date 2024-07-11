@@ -29,4 +29,15 @@ export class JobListComponent implements OnInit {
       }
     );
   }
+
+  apply(jobId: number) {
+    this.jobService.applyForJob(jobId).subscribe(
+      () => {
+        alert('Application submitted!');
+      },
+      error => {
+        console.error('Error applying for job', error);
+      }
+    );
+  }
 }
